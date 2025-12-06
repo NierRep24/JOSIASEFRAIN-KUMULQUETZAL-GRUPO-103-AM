@@ -1,11 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
-
-/// <summary>
-/// Shim sencillo para poder usar Awaitable.WaitForSecondsAsync(...)
-/// en versiones de Unity donde Awaitable aún no existe.
-/// No bloquea el hilo principal, solo usa Task.Delay.
-/// </summary>
+<summary>
+</summary>
 public static class Awaitable
 {
     public static async Task WaitForSecondsAsync(float seconds)

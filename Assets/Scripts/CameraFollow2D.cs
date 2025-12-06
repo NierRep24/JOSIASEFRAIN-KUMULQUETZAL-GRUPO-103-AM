@@ -3,10 +3,10 @@ using UnityEngine;
 public class CameraFollow2D : MonoBehaviour
 {
     [Header("Objetivo a seguir")]
-    public Transform target;                 // aquí va la Nave
+    public Transform target;
 
     [Header("Suavizado")]
-    public float smoothTime = 0.2f;          // tiempo de suavizado (más alto = más lento)
+    public float smoothTime = 0.2f;
     public Vector2 offset = new Vector2(0f, 0f);
 
     [Header("Ejes a seguir")]
@@ -31,12 +31,8 @@ public class CameraFollow2D : MonoBehaviour
     {
         if (target == null)
             return;
-
-        // Si queremos esperar a que el juego empiece
         if (waitForGameStart && shipController != null && !shipController.gameStarted)
             return;
-
-        // Posición deseada de la cámara
         Vector3 desiredPosition = transform.position;
 
         if (followX)
@@ -44,11 +40,7 @@ public class CameraFollow2D : MonoBehaviour
 
         if (followY)
             desiredPosition.y = target.position.y + offset.y;
-
-        // Aseguramos que la cámara siempre esté a -10 en Z
         desiredPosition.z = -10f;
-
-        // Movimiento suave con SmoothDamp
         transform.position = Vector3.SmoothDamp(
             transform.position,
             desiredPosition,
