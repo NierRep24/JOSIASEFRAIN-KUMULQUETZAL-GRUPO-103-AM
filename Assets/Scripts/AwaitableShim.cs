@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using UnityEngine;
-<summary>
-</summary>
+
 public static class Awaitable
 {
     public static async Task WaitForSecondsAsync(float seconds)
