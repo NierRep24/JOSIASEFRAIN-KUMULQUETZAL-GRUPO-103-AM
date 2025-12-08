@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spike
   - Ground
+  - Meta
+  - Cargo
   layers:
   - Default
   - TransparentFX
