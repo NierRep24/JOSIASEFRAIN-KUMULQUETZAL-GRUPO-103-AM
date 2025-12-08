@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Transform cargo;
 
     [Header("Tiempo de reinicio")]
-    public float reloadDelay = 2f;
+    public float reloadDelay = 0f;
 
     private bool isGameOver = false;
 
